@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>쨍하고 명부/암부가 뚜렷한 촬영 설정 요약</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1, h2, h3 {
+            color: #0056b3; /* Sony-ish blue */
+        }
+        h1 {
+            text-align: center;
+            border-bottom: 2px solid #0056b3;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        h2 {
+            margin-top: 30px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+        }
+        h3 {
+            margin-top: 20px;
+            color: #007bff;
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        li {
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #e9ecef;
+            border-left: 5px solid #007bff;
+        }
+        strong {
+            color: #d63384; /* A contrasting accent color */
+        }
+        .note {
+            font-style: italic;
+            color: #555;
+            font-size: 0.9em;
+        }
+        .important {
+            color: #dc3545;
+            font-weight: bold;
+        }
+        .parameter {
+            font-weight: bold;
+            color: #28a745; /* Green for parameters */
+        }
+        .value {
+            font-weight: bold;
+            color: #fd7e14; /* Orange for values */
+        }
+        .camera-info {
+            background-color: #fff3cd; /* Light yellow for info box */
+            border: 1px solid #ffeeba;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>색이 쨍하고 명부/암부가 뚜렷한 촬영을 위한 상세 설정 요약</h1>
+        <p class="camera-info">이전에 설명드린 "색이 쨍하게 도드라지면서 명부와 암부가 뚜렷한" 영상을 위한 카메라 설정을 핵심 항목별로 더 상세하게 정리해 드립니다. 이 설정은 주로 <strong>SONY A7S3</strong>를 기준으로 하며, <strong>FR7</strong>에서도 픽처 프로파일 관련 내용은 동일하게 적용될 수 있습니다.</p>
+
+        <h2>1. 크리에이티브 룩 (Creative Look) 활용 – A7S3 사용자에게 추천</h2>
+        
+        <h3>기본 룩 선택:</h3>
+        <ul>
+            <li><parameter>VV (비비드):</parameter> 생생한 색상과 높은 콘트라스트를 제공하여 즉각적으로 쨍한 느낌을 줍니다.</li>
+            <li><parameter>VV2 (비비드2):</parameter> VV보다 더욱 강렬한 색상과 콘트라스트를 원할 때 선택합니다.</li>
+        </ul>
+
+        <h3>세부 파라미터 적극 조정 <span class="note">(룩 선택 후, 해당 룩의 옵션에서):</span></h3>
+        <ul>
+            <li><parameter>콘트라스트 (Contrast):</parameter> <value>+2 ~ +3</value> 정도로 높여 명암 대비를 극대화합니다. <span class="note">(명부/암부 뚜렷)</span></li>
+            <li><parameter>채도 (Saturation):</parameter> <value>+2 ~ +3</value> 정도로 높여 색의 선명도와 생동감을 더합니다. <span class="note">(색감 쨍하게)</span></li>
+            <li><parameter>선명도 (Sharpness):</parameter> <value>+1 ~ +2</value> 정도로 올려 피사체의 윤곽을 또렷하게 만들어 쨍한 느낌을 보조합니다.</li>
+            <li><parameter>섀도우 (Shadows):</parameter> <value>-1 ~ -2</value> 정도로 낮춰 어두운 영역을 더 깊고 진하게 만들어 콘트라스트를 강화합니다. <span class="note">(암부 뚜렷)</span></li>
+            <li><parameter>하이라이트 (Highlights):</parameter> <value>0 또는 +1</value> 정도로 조심스럽게 조정합니다. <span class="important">과도하게 높이면 밝은 부분이 하얗게 날아갈(클리핑) 수 있으므로 주의합니다.</span> <span class="note">(명부 강조)</span></li>
+        </ul>
+
+        <h2>2. 픽처 프로파일 (Picture Profile) 직접 설정 – A7S3 및 FR7 사용자</h2>
+        <p class="note">S-Log2/3 등 Log 감마는 후보정용이므로 피합니다.</p>
+
+        <h3>기본 감마 (Gamma) 선택:</h3>
+        <ul>
+            <li><parameter>ITU709:</parameter> 표준적인 콘트라스트와 색상을 제공하며, 이를 기반으로 조정 시작하기 좋습니다.</li>
+            <li><parameter>Cine1 또는 Cine2:</parameter> ITU709보다 하이라이트 표현에 여유가 있으면서도 적당한 콘트라스트를 가집니다. 이를 기반으로 콘트라스트를 더 강하게 만들 수 있습니다.</li>
+            <li><parameter>Still (스틸):</parameter> 사진과 유사한 높은 콘트라스트와 채도를 기본으로 가집니다.</li>
+        </ul>
+
+        <h3>블랙 레벨 (Black Level):</h3>
+        <ul>
+            <li><value>-7 에서 -15 사이</value>로 설정하여 어두운 부분의 기준점을 낮춰 전체적인 콘트라스트를 끌어올립니다. <span class="note">(암부 깊게)</span></li>
+        </ul>
+
+        <h3>블랙 감마 (Black Gamma):</h3>
+        <ul>
+            <li><parameter>범위:</parameter> <value>좁게 (Narrow)</value>로 설정하여 암부의 특정 영역에만 영향을 주도록 합니다.</li>
+            <li><parameter>레벨:</parameter> <value>-5 에서 -7 사이의 음수 값</value>으로 설정하여 암부를 더욱 어둡고 명확하게 만듭니다. <span class="note">(암부 뚜렷)</span></li>
+        </ul>
+
+        <h3>니 (Knee):</h3>
+        <ul>
+            <li><parameter>모드:</parameter> <value>자동 (Auto)</value>을 기본으로 사용하되, 더 극적인 하이라이트 표현을 원한다면 <value>수동 (Manual)</value>으로 설정하고 포인트를 낮게 (예: <value>80-90%</value>), 슬로프를 가파르게 (예: <value>+3 ~ +5</value>) 설정합니다. <span class="important">단, 하이라이트 클리핑에 매우 주의해야 합니다.</span></li>
+        </ul>
+
+        <h3>컬러 모드 (Color Mode):</h3>
+        <ul>
+            <li><parameter>ITU709 매트릭스:</parameter> 표준적인 색 재현입니다.</li>
+            <li><parameter>Pro 또는 Still:</parameter> 선택한 감마에 따라 제공될 경우, 보다 풍부하고 진한 색 표현을 기대할 수 있습니다. <span class="note">(색감 쨍하게)</span></li>
+        </ul>
+
+        <h3>채도 (Saturation):</h3>
+        <ul>
+            <li><value>+15 에서 +30 또는 그 이상</value>으로 과감하게 높입니다. <span class="important">단, 특정 색이 부자연스럽게 튀거나 뭉개지지 않는지 화면을 통해 반드시 확인하며 조절합니다.</span> <span class="note">(색감 쨍하게)</span></li>
+        </ul>
+
+        <h3>디테일 (Detail):</h3>
+        <ul>
+            <li><parameter>레벨:</parameter> <value>+3 에서 +7 사이</value>로 설정하여 이미지의 선명도를 높여 또렷하고 쨍한 느낌을 강조합니다.</li>
+            <li><parameter>기타 설정 (Crispening 등):</parameter> 필요에 따라 미세 조정하여 윤곽선을 더욱 선명하게 만들 수 있으나, <span class="important">과하면 인위적인 느낌(halo 현상 등)이 발생할 수 있습니다.</span></li>
+        </ul>
+
+        <h2>3. 다이나믹 레인지 최적화 (DRO: Dynamic Range Optimizer) / 자동 HDR</h2>
+        <ul>
+            <li><parameter>설정:</parameter> <value>끔 (Off) 또는 가장 낮은 단계인 Lv1</value>으로 설정합니다.</li>
+            <li><parameter>이유:</parameter> DRO는 암부를 밝히고 명부를 어둡게 하여 다이나믹 레인지를 넓히므로, 의도하는 높은 콘트라스트와는 반대 효과를 냅니다. 따라서 이 기능을 끄거나 최소화해야 명부와 암부의 대비가 뚜렷해집니다.</li>
+        </ul>
+
+        <h2>4. 조명 (Lighting) – <span class="important">매우 중요!</span></h2>
+        <p>카메라 설정만으로는 한계가 있습니다. 원하는 결과물을 얻기 위해서는 조명이 핵심적입니다.</p>
+        <ul>
+            <li><strong>콘트라스트가 강한 조명 활용:</strong>
+                <ul>
+                    <li><parameter>하드 라이트 소스:</parameter> 태양광 직사광선, 확산판(디퓨저)을 사용하지 않은 조명 등 그림자 경계가 명확한 조명을 주 조명으로 사용합니다.</li>
+                    <li><parameter>높은 Key/Fill 비율:</parameter> 주 조명(Key Light)을 강하게 사용하고, 그림자를 채우는 보조 조명(Fill Light)은 약하게 사용하거나 사용하지 않아 명암 차이를 극대화합니다.</li>
+                </ul>
+            </li>
+            <li><parameter>림 라이트/백 라이트:</parameter> 피사체의 윤곽을 강조하는 림 라이트나 배경과 분리하는 백 라이트를 활용하면 입체감과 함께 피사체가 더욱 도드라져 보입니다.</li>
+            <li><parameter>장면 구성:</parameter> 촬영하는 장면 자체에 밝은 부분과 어두운 부분이 명확히 존재하도록 구성합니다.</li>
+        </ul>
+
+        <h2>추가 핵심 사항:</h2>
+        <ul>
+            <li><parameter>정확한 화이트 밸런스:</parameter> 색이 틀어지지 않고 깨끗하고 선명한 본연의 색을 표현하기 위해 필수적입니다.</li>
+            <li><parameter>적정 노출 확보:</parameter> 히스토그램, 지브라 패턴을 활용하여 명부가 완전히 하얗게 날아가거나(클리핑) 암부가 너무 어두워 디테일이 사라지지 않도록 주의합니다.</li>
+            <li><parameter>테스트 촬영 및 확인:</parameter> 제시된 값은 시작점이며, 실제 촬영 환경과 피사체에 따라 결과가 다를 수 있습니다. <span class="important">반드시 테스트 촬영 후 화면을 보면서 세부 값을 조절하여 최적의 결과물을 찾으십시오.</span> 인위적이거나 보기 싫은 아티팩트가 생기지 않도록 주의합니다.</li>
+        </ul>
+    </div>
+</body>
+</html>
